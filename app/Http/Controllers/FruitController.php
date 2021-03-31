@@ -17,9 +17,7 @@ class FruitController extends Controller
 
         $fruits = Fruit::paginate($perPage);
 
-        return response()->json([
-            $fruits,
-        ]);
+        return response()->json($fruits);
     }
 
     public function show($fruitId)
